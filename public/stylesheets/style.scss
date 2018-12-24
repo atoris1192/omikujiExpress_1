@@ -1,6 +1,7 @@
+@charset "utf-8";
 body {
-  background-color: #efefef; }
-
+  background-color: #efefef;  
+}
 #btn {
   margin: 30px auto 0;
   width: 200px;
@@ -15,11 +16,12 @@ body {
   cursor: pointer;
   box-shadow: 0 10px 0 #d1483e;
   opacity: .8;
-  user-select: none; }
-  #btn.pushed {
+  user-select: none;
+  &.pushed {
     margin-top: 36px;
-    box-shadow: 0 4px 0 #d1483e; }
-  #btn:hover {
-    opacity: 1; }
-
-/*# sourceMappingURL=style.css.map */
+    box-shadow: 0 4px 0 #d1483e;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
