@@ -2,11 +2,22 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict'
 
+  const url = 'http://localhost:3000/api/random'
+
   const btn = document.querySelector('#btn')
   btn.addEventListener('click', () => {
-    const results = ['大吉', '中吉', '末吉', '凶']
-    let random = Math.floor(Math.random() * (1+2))
-    btn.textContent = results[random]
+      fetch(url)
+        .then(res => {
+          return res.json()
+        })
+        .then(result => {
+          btn.textContent = result.item
+          console.log(result.item)
+        })
+        .catch(err => {
+          console.error(err)
+        })
+
   })
   btn.addEventListener('mousedown', () => {
     btn.classList.add('pushed')
