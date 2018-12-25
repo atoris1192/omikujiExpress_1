@@ -6,10 +6,10 @@ const dbName = 'myproject'
 
 
 const main = async () => {
-  const client = new MongoClient(url, { useNewUrlParser: true })
+  const client = new MongoClient(process.env.MONGODB_URI || url, { useNewUrlParser: true })
   await client.connect()
   console.info("Connected  Server ...")
-  const db = client.db(dbName)
+  const db = client.db(process.env.DB_NAME || dbName)
 
   /* GET home page. */
   router.get('/', function(req, res, next) {
