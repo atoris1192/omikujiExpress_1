@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict'
 
   const btn = document.querySelector('#btn')
+  const result = document.querySelector('#result')
 
   btn.addEventListener('click', () => {
     const url = 'http://localhost:3000/api/random'

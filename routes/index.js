@@ -15,6 +15,23 @@ const main = async () => {
   router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
   });
+  router.get('/new', (req, res) => {
+    res.render('new')
+  })
+
+  // api
+  router.post('/api/new', async(req, res) => {
+    const collection = db.collection('omikuji')
+    console.log(req.body)
+    const data = {
+      item: req.body
+    }
+    await collection.insertOne(req.body)
+      .then(r => console.log(r.result))
+      .catch(err => console.error(err))
+
+    res.redirect('/')
+  })
   router.get('/api/insertMany', async(req, res, next) => {
     const collection = db.collection('omikuji')
     await collection.insertMany([
@@ -23,14 +40,14 @@ const main = async () => {
       {"item": "末吉"},
       {"item": "凶"},
     ])
-      .then(res => console.log(res.result))
+      .then(r => console.log(r.result))
       .catch(err => console.error(err))
     res.send('insertMany done')
   })
   router.get('/api/deleteMany', async(req, res) => {
     const collection = db.collection('omikuji')
-    await collection.deleteMany('omikuji')
-      .then(res => console.log(res.result))
+    await collection.deleteMany({})
+      .then(r => console.log(r.result))
       .catch(err => console.error(err))
     res.send('DeleteMany done')
   })

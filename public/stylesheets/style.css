@@ -1,25 +1,38 @@
 body {
-  background-color: #efefef; }
+  box-sizing: border-box;
+  background-color: #eeeeee; }
 
 #btn {
-  margin: 30px auto 0;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #f5eeee;
+  margin: 60px auto 0;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: #ec3f3f;
   color: #fff;
   text-align: center;
-  line-height: 200px;
-  font-size: 42px;
+  line-height: 100px;
+  font-size: 33px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 10px 0 #d1483e;
   opacity: .8;
   user-select: none; }
-  #btn.pushed {
-    margin-top: 36px;
-    box-shadow: 0 4px 0 #d1483e; }
   #btn:hover {
     opacity: 1; }
+
+.new {
+  margin: 20px auto 0;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgba(40, 46, 40, 0.507);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px; }
+  .new .submit {
+    width: 80px;
+    color: red;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px; }
 
 /*# sourceMappingURL=style.css.map */

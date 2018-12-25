@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  section.new
+    form(method="POST" action="/api/new")
+      input(type="text" name="item" placeholder="ネコ吉" )
+      input(type="submit" value="Create")
+    p: a(href="/") Go back

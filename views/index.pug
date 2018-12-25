@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  #btn ?
+  #btn 今日の運勢
+  section.new
+    form(method="POST" action="/api/new")
+      input(type="text" name="item" placeholder="ネコ吉" ).item
+      input(type="submit" value="Create").submit
+    #result #{ result }
   script(src="javascripts/main.js")
