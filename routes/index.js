@@ -57,7 +57,7 @@ const main = async () => {
     const result = await collection.aggregate([
       { $sample: { size: 1 }}
     ]).toArray()
-    console.log(result[0])
+    // console.log(result[0])
     res.json(result[0])
   })
   

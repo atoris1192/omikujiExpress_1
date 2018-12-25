@@ -5,6 +5,7 @@ block content
   section.new
     form(method="POST" action="/api/new")
       input(type="text" name="item" placeholder="ネコ吉" ).item
+      input(type="hidden" name="_csrf" value=`${ csrftoken }`)
       input(type="submit" value="Create").submit
     #result #{ result }
   script(src="javascripts/main.js")
