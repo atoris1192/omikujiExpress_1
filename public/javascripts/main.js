@@ -21,12 +21,4 @@ document.addEventListener('DOMContentLoaded', () => {
       })
   })
 
-  btn.addEventListener('mousedown', () => {
-    btn.classList.add('pushed')
-  })
-
-  btn.addEventListener('mouseup', () => {
-    btn.classList.remove('pushed')
-  })
-
 })
