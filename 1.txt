@@ -1,3 +1,6 @@
 test 
 test 2 
 test 3 isue #4
+issue #6
+plus
+
